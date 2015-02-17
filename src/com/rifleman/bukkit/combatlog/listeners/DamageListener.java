@@ -4,6 +4,7 @@
  */
 package com.rifleman.bukkit.combatlog.listeners;
 
+import com.rifleman.bukkit.combatlog.CombatLog;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,6 +17,9 @@ import org.bukkit.event.entity.EntityDamageEvent;
  * @author rifleman
  */
 public class DamageListener implements Listener {
+    public DamageListener() {
+        
+    }
     
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerDamage(org.bukkit.event.entity.EntityDamageByEntityEvent event) {
@@ -36,6 +40,10 @@ public class DamageListener implements Listener {
                 
                 damager.sendMessage("Cause: " + cause.name() + " Dmg: " + damage);
                 damaged.sendMessage("Cause: " + cause.name() + " Dmg: " + damage);
+                
+                CombatLog.db.insert(damager, damaged);
+                damager.sendMessage("[CombatLog] You have Combat tagged MrCyaNerd. Do not logout!");
+                damaged.sendMessage("[CombatLog] You have Combat tagged MrCyaNerd. Do not logout!");
             }
         }
     }

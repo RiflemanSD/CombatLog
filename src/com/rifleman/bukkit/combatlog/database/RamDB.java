@@ -24,6 +24,8 @@ public class RamDB {
     }
     
     public Player get(Player player) {
+        if (!this.players.containsKey(player)) return null;
+        
         return this.players.get(player);
     }
 }
