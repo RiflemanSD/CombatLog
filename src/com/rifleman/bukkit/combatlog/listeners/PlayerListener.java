@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.rifleman.bukkit.combatlog.listeners;
+package com.rifleman.bukkit.combatlog.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,6 +14,7 @@ import org.bukkit.event.Listener;
 public class PlayerListener implements Listener {
     
     public PlayerListener() {
+        
     }
     
     @EventHandler
