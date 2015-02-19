@@ -1,0 +1,5 @@
+name: CombatLog
+main: org.rifleman.bukkit.combatlog.CombatLog
+version: 0.0.1
+author: Rifleman
+  
