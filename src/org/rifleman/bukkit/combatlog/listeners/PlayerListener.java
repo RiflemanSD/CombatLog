@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.rifleman.bukkit.combatlog;
+package org.rifleman.bukkit.combatlog.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
